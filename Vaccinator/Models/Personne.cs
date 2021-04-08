@@ -22,14 +22,15 @@ namespace Vaccinator.Models
         [MaxLength(5)]
         public string Sexe { get; set; }
 
+        [Required]
         [DataType(DataType.Date)]
         [Display(Name = "Date de naissance")]
-        public DateTime AnneeDeNaissance { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime DateDeNaissance { get; set; }
 
         [Required]
         public bool Status { get; set; }
 
-        [Required]
         public virtual ICollection<Vaccin> Vaccins { get; set; }
 
     }

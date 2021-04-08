@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Vaccinator.Models;
 
 namespace Vaccinator.Models
 {
@@ -18,5 +19,7 @@ namespace Vaccinator.Models
         }
 
         public DbSet<Personne> Personne { get; set; }
+
+        public DbSet<Vaccinator.Models.Vaccin> Vaccin { get; set; }
     }
 }

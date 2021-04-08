@@ -27,6 +27,7 @@ namespace Vaccinator.Models
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime Date { get; set; }
 
+        [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         [Display(Name = "Date du prochain rappel")]
         public DateTime DateRappel { get; set; }
